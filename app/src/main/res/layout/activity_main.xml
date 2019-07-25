@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+
+
+
+    >
+    <FrameLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        tools:layout_editor_absoluteY="254dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:id="@+id/detailscontainer"> </FrameLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigator"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/game_drawer_header"
+        >
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

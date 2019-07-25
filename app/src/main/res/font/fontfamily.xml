@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        android:font="@font/turtle"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+    />
+    <font
+        android:font="@font/got"
+        android:fontStyle="normal"
+        android:fontWeight="400"/>
+    <font
+        android:font="@font/pix"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        />
+    <font
+        android:font="@font/led"
+        android:fontStyle="normal"
+        android:fontWeight="400"/>
+    <font
+        android:font="@font/godfather"
+        android:fontStyle="normal"
+        android:fontWeight="400"/>
+</font-family>
