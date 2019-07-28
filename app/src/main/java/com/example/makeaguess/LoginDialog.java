@@ -50,12 +50,14 @@ public class LoginDialog extends DialogFragment implements View.OnClickListener 
                 if(player!=null){
 
                     DialogFragment confirmDialog=new ConfirmDialog();
+                    bundle.putString("New","Old");
                     confirmDialog.setArguments(bundle);
                     confirmDialog.setCancelable(false);
                     confirmDialog.show(fragmentTransaction,null);}
                 else
                 {
                     Frag1 frag1=new Frag1();
+                    bundle.putString("New","New");
                     frag1.setArguments(bundle);
                     fragmentTransaction.replace(R.id.detailscontainer,frag1);
                     fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);

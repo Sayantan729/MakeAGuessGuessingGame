@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HelpFrag">
 
     <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollview"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#212121">
     <TextView
+        android:id="@+id/helptext"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:fontFamily="@font/pix"
-        android:textSize="40dp"
-        android:background="#212121"
+        android:textSize="60dp"
+
         android:textColor="#fff"
         android:text="This is a guessing game. There are two modes in the game:
  Animals and Flowers.\nThere are 25 rounds in each mode, with a timer of 5 seconds for each
@@ -20,5 +31,27 @@
  on the next button on the bottom right of the screen to go to the next round.
 \nThere are five lives for each game.\nThe score for each game is calculated on the basis of your streak as well, so try to get
  as many correct as possible in a single run.\nGOOD LUCK!!" />
+            <Button
+                android:id="@+id/helpok"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/pix"
+                android:text="Ok"
+                android:textColor="@color/colorPrimary"
+                android:textSize="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/helptext"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -90,6 +90,17 @@ public class Frag1 extends Fragment implements View.OnClickListener {
         menu.add(0,13,90,"Exit").setIcon(R.drawable.close);
         animals.setOnClickListener(this);
         flowers.setOnClickListener(this);
+        Bundle bundle=getArguments();
+        if(bundle.getString("New").equals("New"))
+        {
+            bundle.putString("New","Old");
+            FragmentTransaction fragmentTransaction=getFragmentManager().beginTransaction();
+            HelpFrag helpFrag=new HelpFrag();
+            fragmentTransaction.replace(R.id.detailscontainer,helpFrag);
+            fragmentTransaction.addToBackStack(helpFrag.getClass().getName());
+            fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            fragmentTransaction.commit();
+        }
 
         return view;
 

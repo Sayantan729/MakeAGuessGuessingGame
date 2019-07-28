@@ -5,10 +5,13 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -19,7 +22,7 @@ import android.view.ViewGroup;
  * Use the {@link HelpFrag#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HelpFrag extends Fragment {
+public class HelpFrag extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -28,6 +31,7 @@ public class HelpFrag extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private Button button;
 
 
 
@@ -66,7 +70,10 @@ public class HelpFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_help, container, false);
+        View view= inflater.inflate(R.layout.fragment_help, container, false);
+        button=view.findViewById(R.id.helpok);
+        button.setOnClickListener(this);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -74,6 +81,14 @@ public class HelpFrag extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        FragmentManager fragmentManager=getFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentManager.popBackStack();
 
     }
 
