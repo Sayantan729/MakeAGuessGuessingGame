@@ -21,16 +21,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:fontFamily="@font/pix"
-        android:textSize="60dp"
+        app:fontFamily="@font/pix"
+        android:textSize="60sp"
 
         android:textColor="#fff"
-        android:text="This is a guessing game. There are two modes in the game:
- Animals and Flowers.\nThere are 25 rounds in each mode, with a timer of 5 seconds for each
- round. Try to guess the animal or the flower in the picture before the timer runs out, and then click
- on the next button on the bottom right of the screen to go to the next round.
-\nThere are five lives for each game.\nThe score for each game is calculated on the basis of your streak as well, so try to get
- as many correct as possible in a single run.\nGOOD LUCK!!" />
+        android:text="@string/help" />
             <Button
                 android:id="@+id/helpok"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
@@ -40,10 +35,10 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:fontFamily="@font/pix"
+                app:fontFamily="@font/pix"
                 android:text="Ok"
                 android:textColor="@color/colorPrimary"
-                android:textSize="40dp"
+                android:textSize="40sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"

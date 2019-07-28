@@ -5,4 +5,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="open_menu">Open</string>
     <string name="close_menu">Close</string>
+    <string name="help">This is a guessing game. There are two modes in the game: Animals and Flowers. There are 25 rounds in each mode, with a timer of 5 seconds for each round. Try to guess the animal or the flower in the picture before the timer runs out, and then click on the next button on the bottom right of the screen to go to the next round.  There are five lives for each game. The score for each game is calculated on the basis of your streak as well, so try to get as many correct as possible in a single run. GOOD LUCK!!</string>
 </resources>
